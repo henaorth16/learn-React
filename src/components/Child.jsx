@@ -5,7 +5,7 @@ import { ThemeProvider } from "../App";
 import Title from "./Title";
 
 export default function Child({ people }) {
-  const {theme, hue} = useContext(ThemeProvider)
+  const {theme} = useContext(ThemeProvider)
   return (
     <div className={`child_wrapper ${theme}`}>
       <Title text="Users" />

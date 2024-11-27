@@ -1,176 +1,213 @@
-*{
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-#root{
-   min-height: 100vh;
-   width: full;
+#root {
+  min-height: 100vh;
+  width: full;
 }
 
 /* Global styles */
 body {
-   font-family: Arial, sans-serif;
-   margin: 0;
-   padding: 0;
-   color: #333;
-   line-height: 1.6;
- }
- 
- /* Wrapper */
- .child_wrapper {
-   max-width: 1000px;
-   margin: 20px auto;
-   padding: 20px;
-   background: #fff;
-   border-radius: 8px;
-   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
- }
- .child_wrapper.dark{
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Wrapper */
+.child_wrapper {
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.child_wrapper.dark {
   background-color: hsl(var(--hue), 100%, 6%);
   color: #dadada;
   box-shadow: 0 2px 4px rgb(0, 0, 0);
   border: 2px solid #444;
- }
- .animated > span{
-   animation: blnking 1.6s infinite;
- }
+}
+.animated > span {
+  animation: blnking 1.6s infinite;
+}
 @keyframes blinking {
-   0%,100%{
-      opacity: 1;
-   }50%{
-      opacity: .3;
-   }
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
 }
 
-button{
+.dark_mode {
   border: none;
-  padding: .2rem .4rem;
+  padding: 0.2rem 0.4rem;
   cursor: pointer;
   position: absolute;
   top: 7px;
   right: 7px;
 }
- /* Table styles */
- table {
-   border-collapse: collapse;
-   width: 100%;
-   text-align: left;
-   background-color: #fff;
- }
- .dark table,  .details.dark > div{
+/* Table styles */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  text-align: left;
+  background-color: #fff;
+}
+.dark table,
+.details.dark > div {
   background-color: hsl(var(--hue), 100%, 6%);
- }
- thead {
-   background-color: #888 ;
-   color: #fff;
- }
- .dark thead {
-   background-color: hsl(var(--hue), 100%, 16%) ;
- }
+}
+thead {
+  background-color: #888;
+  color: #fff;
+}
+.dark thead {
+  background-color: hsl(var(--hue), 100%, 16%);
+}
 
- thead tr {
-   border-bottom: 2px solid #ddd;
- }
- 
- thead th {
-   padding: 10px;
-   text-transform: uppercase;
-   font-size: 14px;
- }
- 
- tbody tr {
-   border-bottom: 1px solid #ddd;
-   transition: background-color 0.3s ease;
- }
- 
- tbody tr:hover {
-   background-color: #f9f9f9;
- }
- .dark tbody tr:hover {
-   background-color: hsl(var(--hue), 100%, 3%);
- }
- 
- tbody td {
-   padding: 10px;
- }
- 
- tbody a {
-   color: #222;
-   text-decoration: none;
-   cursor: pointer;
- }
- .dark a{
+thead tr {
+  border-bottom: 2px solid #ddd;
+}
+
+thead th {
+  padding: 10px;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+tbody tr {
+  border-bottom: 1px solid #ddd;
+  transition: background-color 0.3s ease;
+}
+
+tbody tr:hover {
+  background-color: #f9f9f9;
+}
+.dark tbody tr:hover {
+  background-color: hsl(var(--hue), 100%, 3%);
+}
+
+tbody td {
+  padding: 10px;
+}
+
+tbody a {
+  color: #222;
+  text-decoration: none;
+  cursor: pointer;
+}
+.dark a {
   color: hsl(calc(var(--hue) + 40), 100%, 76%);
- }
- 
- tbody a:hover {
-   text-decoration: underline;
- }
- 
- /* Responsive adjustments */
- @media (max-width: 768px) {
-   .child_wrapper {
-     padding: 10px;
-   }
- 
-   table {
-     font-size: 14px;
-   }
- 
-   thead th,
-   tbody td {
-     padding: 8px;
-   }
- }
- 
+}
 
- 
- /* Container */
- .details div {
-   max-width: 800px;
-   margin: 20px auto;
-   padding: 20px;
-   background-color: #fff;
-   border-radius: 8px;
-   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
- }
+tbody a:hover {
+  text-decoration: underline;
+}
 
- /* Header styles */
- .details h2 {
-   text-align: center;
-   color: #444;
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .child_wrapper {
+    padding: 10px;
+  }
+
+  table {
+    font-size: 14px;
+  }
+
+  thead th,
+  tbody td {
+    padding: 8px;
+  }
+}
+
+/* Container */
+.details div {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Header styles */
+.details h2 {
+  text-align: center;
+  color: #444;
+}
+.details h3,
+h4 {
+  color: #555;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+/* Paragraph and text styles */
+.details p {
+  margin: 8px 0;
+  font-size: 16px;
+}
+
+.details p strong {
+  color: #222;
+}
+.details.dark h2,
+.details.dark h3,
+.details.dark h4,
+.details.dark p,
+.details.dark strong {
+  color: hsl(var(--hue), 100%, 85%);
+}
+
+/* Geo Location and Company sections */
+.details h4 {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+/* Loading message */
+.details p:last-child {
+  text-align: center;
+  font-style: italic;
+  color: #888;
+}
+.error {
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+button{
+  background-color: hsl(var(--hue), 100%, 15%);
+  border: 1px solid hsl(var(--hue), 100%, 92%);
+  color: #fff;
+  padding: .4rem .7rem;
+  font-size: .7rem;
+}
+ .error button {
+  background-color: hsl(var(--hue), 100%, 15%);
+  border: 1px solid hsl(var(--hue), 100%, 92%);
+  color: #fff;
+  padding: .4rem .7rem;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
  }
- .details h3, h4 {
-   color: #555;
-   border-bottom: 1px solid #ddd;
-   padding-bottom: 5px;
-   margin-bottom: 10px;
-  }
-  
-  /* Paragraph and text styles */
-  .details p {
-    margin: 8px 0;
-    font-size: 16px;
-  }
-  
-  .details p strong {
-    color: #222;
-  }
-  .details.dark h2, .details.dark h3,.details.dark p, .details.dark strong{
-   color: hsl(var(--hue), 100%, 85%);
-  }
- 
- /* Geo Location and Company sections */
- .details h4 {
-   font-size: 16px;
-   margin-top: 10px;
- }
- 
- /* Loading message */
- .details p:last-child {
-   text-align: center;
-   font-style: italic;
-   color: #888;
- }
- 
+.error button:hover{
+  background-color: hsl(var(--hue), 100%, 8%);
+
+}

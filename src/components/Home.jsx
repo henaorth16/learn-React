@@ -13,5 +13,13 @@ export default function Home() {
       .catch((error) => console.error("Error fetching users:", error));
   }, []);
 
-  return <>{data.length === 0 ? <p>Loading...</p> : <Child people={data} />}</>;
+  return <>
+    {
+      data.length === 0 ? 
+      <p>Loading...</p> : 
+      <Child 
+        people={data}
+      />
+    }
+  </>;
 }

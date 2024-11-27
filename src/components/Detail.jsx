@@ -91,12 +91,13 @@ export default function Detail() {
           </p>
         </div>
       ) : (
-        <div className="child_wrapper">
+        <div className={`error ${theme}`}>
           <p>
             {error.toString().includes("NetworkError")
               ? "Check your Internet Connection"
               : "Something is Wrong"}
           </p>
+          <button onClick={()=> window.location.reload()}>Refresh</button>
         </div>
       )}
     </div>

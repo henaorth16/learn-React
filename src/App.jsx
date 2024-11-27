@@ -26,7 +26,7 @@ export default function App() {
   }, [theme]);
   return (
     <ThemeProvider.Provider value={{ theme }}>
-      <button onClick={toggle}>
+      <button className="dark_mode" onClick={toggle}>
         {" "}
         Toggle {theme === "light" ? "Dark" : "Light"} Mode
       </button>
