@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Child from "./child";
+import TableOfData from "./TableOfData";
 
 export default function Home() {
   const [data, setData] = useState([]);
@@ -17,7 +17,7 @@ export default function Home() {
     {
       data.length === 0 ? 
       <p>Loading...</p> : 
-      <Child 
+      <TableOfData 
         people={data}
       />
     }

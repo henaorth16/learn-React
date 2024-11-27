@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { ThemeProvider } from "../App";
 import Title from "./Title";
 
-export default function Child({ people }) {
+export default function TableOfData({ people }) {
   const {theme} = useContext(ThemeProvider)
   return (
     <div className={`child_wrapper ${theme}`}>
