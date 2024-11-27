@@ -28,12 +28,14 @@ body {
  }
  .child_wrapper.dark{
   background-color: hsl(var(--hue), 100%, 6%);
-  color: #fff;
+  color: #dadada;
+  box-shadow: 0 2px 4px rgb(0, 0, 0);
+  border: 2px solid #444;
  }
  .animated > span{
-   animation: pop 1.6s infinite;
+   animation: blnking 1.6s infinite;
  }
-@keyframes pop {
+@keyframes blinking {
    0%,100%{
       opacity: 1;
    }50%{
