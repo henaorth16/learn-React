@@ -20,16 +20,18 @@ The purpose of this project is to:
 - **Focus**: Fundamental concepts, including:
   - React components (functional components)
   - Props and state
+  - Hooks (useState, useEffect, useContext)
+  - basic State management
   - Basic event handling
   - Simple structure and organization
 
 ### 2. **Intermediate**
 - **Audience**: Developers who have basic knowledge of React and want to level up.
 - **Focus**: Intermediate concepts, such as:
-  - Context API for state management
   - Custom hooks
   - More modular and reusable code
-  - Cleaner architecture and best practices
+  - Cleaner architecture
+  - Best practices
 
 ---
 
