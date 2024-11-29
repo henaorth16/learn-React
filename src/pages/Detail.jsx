@@ -1,7 +1,7 @@
 import { useState, useEffect, useContext } from "react";
 import { useParams } from "react-router-dom";
 import { ThemeProvider } from "../App";
-import Title from "./Title";
+import Title from "../components/Title";
 
 export default function Detail() {
   const [user, setUser] = useState(null); // Initialize user state

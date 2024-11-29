@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import TableOfData from "./TableOfData";
+import TableOfData from "../components/TableOfData";
 
 export default function Home() {
   const [data, setData] = useState([]);

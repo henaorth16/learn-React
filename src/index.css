@@ -7,7 +7,9 @@
   min-height: 100vh;
   width: full;
 }
-
+*::-moz-selection{
+  background-color: hsl(var(--hue), 100%, 50%);;
+}
 /* Global styles */
 body {
   font-family: Arial, sans-serif;
