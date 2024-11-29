@@ -1,4 +1,3 @@
-import { useContext } from "react";
 import { uppercase } from "../utils";
 import { Link } from "react-router-dom";
 import Title from "./Title";
