@@ -1,13 +1,14 @@
 import { useState, useEffect, useContext } from "react";
 import { useParams } from "react-router-dom";
-import { ThemeProvider } from "../App";
 import Title from "../components/Title";
+import { useThemeContext } from "../lib/context";
+import Skeleton from "../components/Skeleton";
 
 export default function Detail() {
   const [user, setUser] = useState(null); // Initialize user state
   const [error, setError] = useState(null); // Initialize user state
   const [isLoading, setIsLoading] = useState(true); // Track loading state
-  const { theme } = useContext(ThemeProvider);
+  const { theme } = useThemeContext();
   const { id } = useParams();
 
   useEffect(() => {
@@ -21,9 +22,9 @@ export default function Detail() {
         setUser(data);
         setIsLoading(false); // Hide skeleton
       } catch (error) {
+        setIsLoading(false); // Hide skeleton in case of an error
         console.log(typeof error, "Error fetching user:", error);
         setError(error);
-        setIsLoading(false); // Hide skeleton in case of an error
       }
     };
 
@@ -34,7 +35,7 @@ export default function Detail() {
     <div className={`details ${theme}`}>
       <Title text="User Details" />
       {isLoading ? (
-        <Skeleton theme={theme} />
+        <Skeleton />
       ) : user ? (
         <div>
           <p>
@@ -97,40 +98,10 @@ export default function Detail() {
               ? "Check your Internet Connection"
               : "Something is Wrong"}
           </p>
-          <button onClick={()=> window.location.reload()}>Refresh</button>
+          <button className={theme} onClick={()=> window.location.reload()}>Refresh</button>
         </div>
       )}
     </div>
   );
 }
 
-function Skeleton({ theme }) {
-  return (
-    <div
-      style={{
-        backgroundColor: theme === "dark" ? "#222" : "#ddd",
-        maxWidth: "800px",
-        margin: "20px auto",
-        padding: "div",
-        height: "94vh",
-        display: "flex",
-        borderRadius: "10px",
-        gap: "19px",
-        flexDirection: "column",
-      }}
-      className="animated"
-    >
-      {Array.from({ length: 9 }).map((_, ix) => (
-        <span
-          key={ix}
-          style={{
-            width: ix % 4 === 0 ? "60%" : "100%",
-            height: "35px",
-            backgroundColor: theme === "light" ? "#aaa" : "#333",
-            borderRadius: "10px",
-          }}
-        ></span>
-      ))}
-    </div>
-  );
-}

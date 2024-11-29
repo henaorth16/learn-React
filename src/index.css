@@ -54,6 +54,10 @@ body {
   position: absolute;
   top: 7px;
   right: 7px;
+  color: black;
+}
+.dark_mode.dark{
+  color: #fef;
 }
 /* Table styles */
 table {
@@ -193,22 +197,26 @@ h4 {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-button{
+button.dark{
   background-color: hsl(var(--hue), 100%, 15%);
   border: 1px solid hsl(var(--hue), 100%, 92%);
   color: #fff;
   padding: .4rem .7rem;
   font-size: .7rem;
 }
- .error button {
+
+.error button {
   background-color: hsl(var(--hue), 100%, 15%);
-  border: 1px solid hsl(var(--hue), 100%, 92%);
-  color: #fff;
+  border: 1px solid hsl(var(--hue), 100%, 82%);
+  color: #161616;
   padding: .4rem .7rem;
   font-size: 1.2rem;
   border-radius: 5px;
   cursor: pointer;
- }
+}
+.error button.dark{
+ color: #ececec;
+}
 .error button:hover{
   background-color: hsl(var(--hue), 100%, 8%);
 

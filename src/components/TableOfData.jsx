@@ -1,11 +1,11 @@
 import { useContext } from "react";
 import { uppercase } from "../utils";
 import { Link } from "react-router-dom";
-import { ThemeProvider } from "../App";
 import Title from "./Title";
+import { useThemeContext } from "../lib/context";
 
 export default function TableOfData({ people }) {
-  const {theme} = useContext(ThemeProvider)
+  const {theme} = useThemeContext()
   return (
     <div className={`child_wrapper ${theme}`}>
       <Title text="Users" />
