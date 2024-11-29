@@ -37,7 +37,7 @@ The purpose of this project is to:
 
 ## 🚀 Getting Started
 
-### Clone the Repository
+### Clone the Repository of this branch
 ```bash
-git clone https://github.com/henaorth16/learn-React.git
+git clone -b basic https://github.com/henaorth16/learn-React.git
 cd learn-React
