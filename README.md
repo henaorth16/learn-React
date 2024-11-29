@@ -41,3 +41,9 @@ The purpose of this project is to:
 ```bash
 git clone https://github.com/henaorth16/learn-React.git
 cd learn-React
+```
+### Clone specific branch
+```bash
+git clone -b basic https://github.com/henaorth16/learn-React.git
+cd learn-React
+```
